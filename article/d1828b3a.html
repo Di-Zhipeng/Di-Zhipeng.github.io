@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -494,7 +495,7 @@
             <div id="articleContent">
                 <h1 id="Error-during-pretty-printers-setup-Error-while-executing-Python-code"><a href="#Error-during-pretty-printers-setup-Error-while-executing-Python-code" class="headerlink" title="Error during pretty printers setup: Error while executing Python code."></a>Error during pretty printers setup: Error while executing Python code.</h1><p>在Arch下使用Clion，发现在Debug下无法正常输出，提示错误信息：Error during pretty printers setup: Error while executing Python code. 百度没有找到很好的答案，于是去Google了一下，在Jetbrains的官方那边，发现了一些Idea用户遇到了同样的问题，有几个人都是Arch用户，他们反应clion出问题是因为Arch的工具链太新了，所以无法正常调试。</p>
 <p>安装Clion-gdb、Clion-cmake以解决问题</p>
-<pre class=" language-shell"><code class="language-shell">$ yay -S clion-gdb clion-cmake</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">$ yay -S clion-gdb clion-cmake<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后在Clion配置里面选择bundle GDB和bundle CMake就可以了</p>
 
             </div>
