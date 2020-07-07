@@ -479,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    545
+                    534
                 </div>
                 
 
@@ -499,14 +499,20 @@
 <p>正常情况下，直接在设置中点击下图的“下载或更新”，安装picgo-core就可以了：</p>
 <p><img src="https://i.loli.net/2020/03/20/YJSofqkPCDKOHe3.png" alt="image-20200320135659055"></p>
 <p>但是我这里非常慢，所以看了一下typora的文档，发现其实这个所谓picgo只不过是一个js的写的包，我们直接使用npm或者yarn全局安装他就可以了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn global add picgo</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">$ yarn global add picgo </code></pre>
 <p>然后找到他的安装目录，我这里是在“~/.yarn/bin/picgo”,于是在上传服务那个下拉菜单里面选择custom，然后填入“ ~/.yarn/bin/picgo upload”就可以了。</p>
 <p>然后，打开picgo的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim .picgo/config.json</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"picBed"</span>: &#123;</span><br><span class="line">    <span class="attr">"uploader"</span>: <span class="string">"smms"</span>, <span class="comment">// 代表当前的默认上传图床为 SM.MS,</span></span><br><span class="line">    <span class="attr">"smms"</span>: &#123;</span><br><span class="line">      <span class="attr">"token"</span>: <span class="string">""</span> <span class="comment">// 从https://sm.ms/home/apitoken获取的token</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"picgoPlugins"</span>: &#123;&#125; <span class="comment">// 为插件预留</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">$ vim .picgo/config.json </code></pre>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"picBed"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"uploader"</span><span class="token operator">:</span> <span class="token string">"smms"</span><span class="token punctuation">,</span> // 代表当前的默认上传图床为 SM.MS<span class="token punctuation">,</span>
+    <span class="token property">"smms"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"token"</span><span class="token operator">:</span> <span class="token string">""</span> // 从https<span class="token operator">:</span>//sm.ms/home/apitoken获取的token
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"picgoPlugins"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> // 为插件预留
+<span class="token punctuation">}</span>
+</code></pre>
 <p>用上面的配置覆盖原来的，并把那个token位置的值填上，保存，就可以了。</p>
 <p>回到Typora，可以点击那个验证按钮，验证一下图片上传功能。</p>
 <p>成功以后，你可以在Typora里设置插入图片时候自动上传，也可以在已经插入的图片上右键点击上传图片。图片就会自动上传到sm.ms图床了，是不是非常方便好用？</p>
@@ -1035,7 +1041,7 @@ Part1.游戏介绍一、 游戏背景大富翁，又名地产大亨，是一种�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.9k</span>&nbsp;字
+                class="white-color">21.4k</span>&nbsp;字
             
             
             

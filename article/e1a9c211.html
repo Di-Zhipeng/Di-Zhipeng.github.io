@@ -486,23 +486,18 @@
             <div id="articleContent">
                 <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>Arch是真的好用！用了这么多Linux发行版，Arch是最能满足需求的，强烈推荐各位体验！不过话说在前面，Arch的坑也是真的很多，要踩好久才能适应。</p>
 <h1 id="KDE下的QQ问题"><a href="#KDE下的QQ问题" class="headerlink" title="KDE下的QQ问题"></a>KDE下的QQ问题</h1><p>QQ是一个很重要的应用，但是无奈腾讯官方的Linux-QQ体验真的是太差了，不过好在有Wine这一神器，以及deepin公司的大力支持，我们可以在Arch上正常使用QQ。安装deepin-QQ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S deepin.com.qq.im</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">yay -S deepin.com.qq.im</code></pre>
 <p>如果你是GNOME，这时候应该已经可以运行QQ了，但是由于我的桌面系统是KDE，不是GNOME，所以对Deepinqq的支持不好，无法正常打开。</p>
 <p>网络上的解决方案多数是装一个gnome-settings-daemon，然后设置他开机运行，但是这样的话，就会使得其他的软件缩放失效（也可能是我的主题原因），我搜索了很长时间，最后自己发现了一种解决方案：使用xsettingsd代替gnome-settings-daemon。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S xsettingsd</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">yay -S xsettingsd</code></pre>
 <p>xsettingsd有自己的github，里面有他的详细设置，他是一个轻量化的工具，Archwiki上也有一些信息，具体可以自己查查。只要不修改xsettingsd的DPI就不会影响其他的程序的缩放。</p>
 <p>安装好他后，可以考虑把他设置为开机启动，或者右键deepinqq的快捷方式，找到deepinqq的运行脚本“run.sh”</p>
 <p>在脚本开始加上：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xsettingsd    (或者xsettingsd&amp;)</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">xsettingsd    <span class="token punctuation">(</span>或者xsettingsd<span class="token operator">&amp;</span><span class="token punctuation">)</span></code></pre>
 <p>就可以正常运行QQ了，但是QQ的缩放还不是正常的，我们需要手动运行一下xsettingsd，在终端输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xsettingsd</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">xsettingsd</code></pre>
 <p>然后Ctrl+Alt+T开一个新的终端，输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env WINEPREFIX=<span class="string">"<span class="variable">$HOME</span>/.deepinwine/Deepin-QQ"</span> /usr/bin/deepin-wine winecfg</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash"><span class="token function">env</span> WINEPREFIX<span class="token operator">=</span><span class="token string">"<span class="token variable">$HOME</span>/.deepinwine/Deepin-QQ"</span> /usr/bin/deepin-wine winecfg</code></pre>
 <p>就打开了winecfg</p>
 <p>调节graphics下的Dpi数值 96对应100% 144对应150% 192对应200%</p>
 <p>按照自己的需求调整就可以了。</p>
@@ -1013,7 +1008,7 @@ KDE下的QQ问题QQ是一个很重要的应用，但是无奈腾讯官方的Linu
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.9k</span>&nbsp;字
+                class="white-color">21.4k</span>&nbsp;字
             
             
             
